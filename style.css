@@ -1,0 +1,339 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e5e5e5;
+    color: #111;
+    font-family: "Times New Roman", serif;
+}
+
+/* =========================
+   ФОРМАТ А4
+========================= */
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    margin: 20px auto;
+    padding: 18mm 20mm;
+
+    page-break-after: always;
+
+    font-size: 19px;
+    line-height: 1.45;
+}
+
+/* =========================
+   ТИТУЛЬНЫЙ ЛИСТ
+========================= */
+
+.title-page {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ЛОГОТИП */
+
+.logo {
+    margin-bottom: 12px;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* ИНСТИТУТ */
+
+.institute {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* ЛИНИЯ */
+
+.line {
+    width: 78%;
+    height: 1.5px;
+    background: #111;
+    margin-top: 13px;
+}
+
+/* ДОКЛАД */
+
+.document-type {
+    font-size: 31px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* ТЕМА */
+
+.topic-label {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.title-page h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-top: 12px;
+    max-width: 170mm;
+}
+
+/* ИНФОРМАЦИЯ */
+
+.title-info {
+    width: 100%;
+    text-align: left;
+    margin-top: 45px;
+
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+.title-info p {
+    margin-bottom: 5px;
+}
+
+/* ГОРОД */
+
+.city {
+    position: absolute;
+    bottom: 15mm;
+
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* =========================
+   ЗАГОЛОВКИ
+========================= */
+
+h2 {
+    text-align: center;
+
+    font-size: 25px;
+    line-height: 1.3;
+
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 21px;
+
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+/* =========================
+   ОСНОВНОЙ ТЕКСТ
+========================= */
+
+p {
+    text-align: justify;
+
+    font-size: 19px;
+    line-height: 1.45;
+
+    margin-bottom: 10px;
+}
+
+/* =========================
+   СПИСКИ
+========================= */
+
+ul,
+ol {
+    margin-left: 27px;
+    margin-bottom: 10px;
+}
+
+li {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   СОДЕРЖАНИЕ
+========================= */
+
+.toc {
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.toc p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 15px;
+
+    border-bottom: 1px dotted #777;
+
+    margin-bottom: 13px;
+
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.toc p span:first-child {
+    text-align: left;
+}
+
+.toc p span:last-child {
+    white-space: nowrap;
+}
+
+/* =========================
+   ЛИТЕРАТУРА
+========================= */
+
+.literature-title {
+    margin-top: 25px;
+}
+
+.literature {
+    margin-top: 10px;
+}
+
+.literature li {
+    margin-bottom: 7px;
+}
+
+/* =========================
+   ПЕЧАТЬ А4
+========================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+
+        margin: 0;
+        padding: 18mm 20mm;
+
+        box-shadow: none;
+    }
+}
+
+/* =========================
+   ТЕЛЕФОН
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background: white;
+    }
+
+    .page {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+
+        margin: 0;
+        padding: 30px 22px;
+
+        font-size: 18px;
+    }
+
+    /* ЛОГОТИП */
+
+    .logo img {
+        width: 95px;
+        height: 95px;
+    }
+
+    /* ИНСТИТУТ */
+
+    .institute {
+        font-size: 21px;
+    }
+
+    /* ДОКЛАД */
+
+    .document-type {
+        font-size: 27px;
+        margin-top: 28px;
+    }
+
+    /* ТЕМА */
+
+    .topic-label {
+        font-size: 19px;
+        margin-top: 27px;
+    }
+
+    .title-page h1 {
+        font-size: 23px;
+        line-height: 1.35;
+    }
+
+    /* ИНФОРМАЦИЯ */
+
+    .title-info {
+        font-size: 18px;
+        margin-top: 38px;
+    }
+
+    /* ГОРОД */
+
+    .city {
+        position: static;
+
+        margin-top: 65px;
+
+        font-size: 18px;
+    }
+
+    /* ЗАГОЛОВКИ */
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* ТЕКСТ */
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+    /* СОДЕРЖАНИЕ */
+
+    .toc {
+        font-size: 18px;
+    }
+
+    .toc p {
+        font-size: 17px;
+    }
+}
